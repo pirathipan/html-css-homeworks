@@ -1,0 +1,109 @@
+$red-color:red;
+
+@mixin square{
+  background:$red-color;
+}
+@mixin size{
+  width: 500px;
+  height: 500px;
+  display: table-cell;
+}
+@mixin text{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  color: white;
+}
+@mixin mini-square($width,$height){
+  display: table;
+  width: $width;
+  height: $height;
+  position: absolute;
+}
+
+main{
+  .figure{
+    @include square();
+    @include size();
+    @include text();
+  }
+  .figure2{
+    @include square();
+    @include size();
+    @include text();
+    transform: translate(2%);
+  }
+  .figure3{
+    @include square();
+    @include size();
+    @include text();
+    position: relative;
+
+
+  }
+  .figure4{
+    @include square();
+    @include size();
+    @include text();
+    transform: translate(2%);
+  }
+
+}
+.figure3{
+  .mini-square{
+    @include mini-square(100px,100px);
+    top:0;
+    right:0;
+    background: green;
+  }
+  .mini-square2{
+    @include mini-square(100px,100px);
+    bottom:0;
+    left:0;
+    background:grey;
+  }
+}
+
+.figure4{
+  .mini-square3{
+    @include mini-square(100px,150px);
+    top:0;
+    right:0;
+    background: green;
+  }
+  .mini-square4{
+    @include mini-square(100px,150px);
+    top:0;
+    left:0;
+    background: white;
+  }
+  .mini-square5{
+    @include mini-square(100px,150px);
+    bottom:0;
+    right:0;
+    background: black;
+
+  }
+  .mini-square6{
+    @include mini-square(100px,150px);
+    bottom:0;
+    left:0;
+    background: grey;
+  }
+}
+
+.mini-square4 span{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  color: black;
+}
+
+.mini-square5 span{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
