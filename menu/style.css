@@ -1,0 +1,59 @@
+nav {
+  text-align: center; }
+
+nav ul li ul {
+  transition: 5s all 3s; }
+
+nav ul {
+  background: grey;
+  padding: 0 0px;
+  list-style: none;
+  position: relative;
+  display: inline-table; }
+
+nav ul ul {
+  display: none; }
+
+nav ul li {
+  float: left;
+  display: inherit; }
+
+nav ul li:hover > ul {
+  display: block; }
+
+nav ul li:hover a:hover {
+  color: white;
+  transition: background 1s, color 1s, transform 1s; }
+
+nav ul li a {
+  display: block;
+  color: black;
+  text-decoration: none; }
+
+nav a {
+  padding: 20px 50px; }
+
+nav ul ul {
+  background: grey;
+  border-radius: 0px;
+  padding: 0;
+  position: absolute;
+  top: 100%; }
+
+nav ul ul li {
+  float: none;
+  position: relative; }
+
+nav ul ul li a {
+  padding: 15px 36px;
+  color: black; }
+
+nav ul ul li a:hover {
+  background: cornflowerblue; }
+
+nav ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0; }
+
+/*# sourceMappingURL=style.css.map */
